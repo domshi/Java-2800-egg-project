@@ -20,30 +20,31 @@ public class Main {
     
     
     // input for number of total chickens and roosters
-    System.out.println("How many chickens do you have? ");
+    System.out.println("\nHow many chickens do you have?");
     Scanner numberOfChickens = new Scanner(System.in);
     int chickens = numberOfChickens.nextInt();
-    System.out.println("How many roosters do you have? ");
+    System.out.println("\nHow many roosters do you have?");
     Scanner numberOfRoosters = new Scanner(System.in);
     int roosters = numberOfRoosters.nextInt();
     
     // calculation for number of hens provided info given
     int hens = chickens - roosters;
-    System.out.println("You have " + hens + " hens.");
+    System.out.println("\nYou have " + hens + " hens.");
 
     // input for eggs per day per hen
-    System.out.println("What is the chance that a hen will lay an egg on any day? \n(please enter a number between 0 and 100)");
+    System.out.println("\nWhat is the chance that a hen will lay an egg on any day? \n(please enter a number between 0 and 100)");
     Scanner eggChance = new Scanner(System.in);
     int eggA = eggChance.nextInt();
+    float eggPercent = eggA / 100;
 
     //input for number of days that will pass
-    System.out.println("How many days will pass? ");
+    System.out.println("\nHow many days will pass?");
     Scanner numberOfDays = new Scanner(System.in);
     int days = numberOfDays.nextInt();
 
     //output for number of eggs per the time given
     
-    
+    System.out.println("\nGiven " + days + " days, and " + hens + " hens, and a chance of " + eggPercent + "% for a hen to lay an egg,\nyou will have " + (hens * eggPercent * days) + " eggs.");
   }
 }
 
