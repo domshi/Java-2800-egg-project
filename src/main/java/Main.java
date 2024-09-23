@@ -32,10 +32,10 @@ public class Main {
     System.out.println("\nYou have " + hens + " hens.");
 
     // input for eggs per day per hen
-    System.out.println("\nWhat is the chance that a hen will lay an egg on any day? \n(please enter a number between 0 and 100)");
+    System.out.println("\nWhat is the chance that a hen will lay an egg on any day? \n(please enter a number between 0.0 and 1.0)");
     Scanner eggChance = new Scanner(System.in);
-    int eggA = eggChance.nextInt();
-    float eggPercent = eggA / 100;
+    float eggA = eggChance.nextFloat();
+    
 
     //input for number of days that will pass
     System.out.println("\nHow many days will pass?");
@@ -44,7 +44,7 @@ public class Main {
 
     //output for number of eggs per the time given
     
-    System.out.println("\nGiven " + days + " days, and " + hens + " hens, and a chance of " + eggPercent + "% for a hen to lay an egg,\nyou will have " + (hens * eggPercent * days) + " eggs.");
+    System.out.println("\nGiven " + days + " days, and " + hens + " hens, and a chance of " + eggA + " for a hen to lay an egg,\nyou will have " + ((hens * eggA) * days) + " eggs.");
   }
 }
 
